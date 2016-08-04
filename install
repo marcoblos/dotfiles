@@ -1,0 +1,53 @@
+#!/bin/bash
+
+## utils
+
+. utils/color
+. utils/log
+. utils/function
+
+## Update System
+
+Warning "Adding PPAs"
+
+. settings/repository
+
+Warning "Updating System"
+
+UpdateSystem
+
+## Overwrite Configs
+
+Warning "Copy configs to /home"
+
+cp -v .bashrc .gitconfig .nvmrc .vimrc $HOME
+
+## BuildEssentials + JDK8 + Git + VIM + NVM + Node + NPM + Sublime + ZSH
+
+Warning "Install programs"
+
+Install "build-essential libssl-dev libcurl4-gnutls-dev oracle-java8-installer oracle-java8-set-default git vim sublime-text-installer"
+
+java -version
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
+
+mkdir ~/.nvm
+nvm install stable
+nvm install 5.2.0
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+chsh -s /bin/zsh
+
+zsh
+
+## Optimize Ubuntu
+
+Warning "Optimize Ubuntu"
+
+Install "indicator-multiload synapse indicator-keylock"
+
+## Remember
+
+Alert "Remember to install later: " "- SublimeText\n- Chrome\n- Slack"

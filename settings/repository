@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sudo add-apt-repository ppa:indicator-multiload/stable-daily -y
+sudo add-apt-repository ppa:synapse-core/ppa -y
+sudo add-apt-repository ppa:tsbarnes/indicator-keylock -y
+sudo add-apt-repository ppa:webupd8team/java -y
+sudo add-apt-repository ppa:webupd8team/sublime-text-3 -y
