@@ -22,11 +22,11 @@ Warning "Copy configs to /home"
 
 cp -v .bashrc .gitconfig .nvmrc .vimrc $HOME
 
-## cURL Chrome + BuildEssentials + JDK8 + Maven + Git + VIM + NVM + Node + NPM + Sublime + ZSH
+## cURL Chrome + BuildEssentials + JDK8 + Maven + Git + VIM + NVM + Node + NPM + Sublime + ZSH + Pip
 
 Warning "Install programs"
 
-Install "zsh curl libc6 libcurl3 zlib1g google-chrome-stable build-essential libssl-dev libcurl4-gnutls-dev oracle-java8-installer oracle-java8-set-default maven git vim sublime-text-installer"
+Install "zsh curl libc6 libcurl3 zlib1g google-chrome-stable build-essential libssl-dev libcurl4-gnutls-dev oracle-java8-installer oracle-java8-set-default maven git vim sublime-text-installer python-pip"
 
 java -version
 
