@@ -1,11 +1,11 @@
 #!/bin/bash
 
-for file in /utils*; do
+for file in utils/*; do
    . $file
 done
 
-adicionar-repositorios
+adicionar_repositorios
 
-# atualizar-sistema
+atualizar-sistema
 
-instalar-programas
+instalar_programas

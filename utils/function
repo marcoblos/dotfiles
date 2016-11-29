@@ -1,84 +1,84 @@
-adicionar-repositorios () {
-    . ../settings/repository
+adicionar_repositorios () {
+    . settings/repository
 }
 
-atualizar-sistema () {
+atualizar_sistema () {
     info "Atualizando sistema"
     sudo apt-get update
     sudo apt-get upgrade -y
     info "Sistema atualizado"
 }
 
-install-apt () {
-    $packageName = $1
-    info "Instalando $packageName"
+install_apt () {
+    packageName=$1
+    info "Instalando ${packageName}"
     sudo apt-get install $packageName -y --force-yes
     sudo apt-get autoremove
 }
 
-install-deb () {
-    $fileName = $1
-    $url = $2
-    info "Instalando $fileName"
+install_deb () {
+    fileName=$1
+    url=$2
+    info "Instalando ${fileName}"
     wget -O $fileName $url
     sudo dpkg -i $fileName
     sudo rm $fileName
 }
 
-install-sdk-man () {
+install_sdk_man () {
     info "Instalando SDK-MAN"
     curl -s "https://get.sdkman.io" | bash
     source "$HOME/.sdkman/bin/sdkman-init.sh"
     sdk version
 }
 
-install-nvm () {
+install_nvm () {
     info "Instalando NVM"
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
     nvm install stable
     nvm install 5.12.0
 }
 
-install-omzsh () {
+install_omzsh () {
     info "Instalando OH MY ZSH"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     chsh -s /bin/zsh
     zsh
 }
 
-instalar-programas-apt () {
-    install-apt "git"
-    install-apt "zsh"
-    install-apt "curl"
-    install-apt "libc6"
-    install-apt "libcurl3"
-    install-apt "zlib1g"
-    install-apt "google-chrome-stable"
-    install-apt "build-essential"
-    install-apt "libssl-dev"
-    install-apt "libcurl4-gnutls-dev"
-    install-apt "oracle-java8-installer"
-    install-apt "oracle-java8-set-default"
-    install-apt "maven"
-    install-apt "vim"
-    install-apt "python-pip"
+instalar_programas_apt () {
+    install_apt "git"
+    install_apt "zsh"
+    install_apt "curl"
+    install_apt "libc6"
+    install_apt "libcurl3"
+    install_apt "zlib1g"
+    install_apt "google-chrome-stable"
+    install_apt "build-essential"
+    install_apt "libssl-dev"
+    install_apt "libcurl4-gnutls-dev"
+    install_apt "oracle-java8-installer"
+    install_apt "oracle-java8-set-default"
+    install_apt "maven"
+    install_apt "vim"
+    install_apt "python-pip"
 }
 
-instalar-programas-deb () {
-    install-deb "vscode" "https://az764295.vo.msecnd.net/stable/7ba55c5860b152d999dda59393ca3ebeb1b5c85f/code_1.7.2-1479766213_amd64.deb"
-    install-deb "slack" "https://downloads.slack-edge.com/linux_releases/slack-desktop-2.3.2-amd64.deb"
+instalar_programas_deb () {
+    install_deb "vscode" "https://az764295.vo.msecnd.net/stable/7ba55c5860b152d999dda59393ca3ebeb1b5c85f/code_1.7.2-1479766213_amd64.deb"
+    install_deb "slack" "https://downloads.slack-edge.com/linux_releases/slack-desktop-2.3.2-amd64.deb"
 }
 
-instalar-programas-diversos () {
-    install-sdk-man
-    install-nvm
-    install-omzsh
+instalar_programas_diversos () {
+    install_sdk_man
+    install_nvm
+    install_omzsh
 }
 
-instalar-programas () {
+instalar_programas () {
     info "Instalando programas"
-    instalar-programas-apt
-    instalar-programas-deb
-    instalar-programas-diversos
+    instalar_programas_apt
+    instalar_programas_deb
+    instalar_programas_diversos
     info "Instação de programas finalizada"
 }

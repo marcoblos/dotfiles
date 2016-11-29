@@ -5,9 +5,9 @@ warning ( ) {
 }
 
 info ( ) {
-    printf "\n ---- \n\n${NC}$1\n${INFO}$2${NC}\n\n ---- \n"
+    printf "\n ---- \n\n${NC}\n${INFO}$1${NC}\n ---- \n"
 }
 
 success ( ) {
-    printf "\n ---- \n\n${NC}$1\n${SUCCESS}$2${NC}\n\n ---- \n"
+    printf "\n ---- \n\n${NC}\n${SUCCESS}$1${NC}\n---- \n"
 }
