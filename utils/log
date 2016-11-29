@@ -1,9 +1,13 @@
 #!/bin/bash
 
-Warning ( ) {
-    printf "\n${RED}$1${NC}\n------- \n"
+warning ( ) {
+    printf "\n${WARNING}$1${NC}\n------- \n"
 }
 
-Alert ( ) {
-    printf "\n ---- \n\n${NC}$1\n${BLUE}$2${NC}\n\n ---- \n"
+info ( ) {
+    printf "\n ---- \n\n${NC}$1\n${INFO}$2${NC}\n\n ---- \n"
+}
+
+success ( ) {
+    printf "\n ---- \n\n${NC}$1\n${SUCCESS}$2${NC}\n\n ---- \n"
 }

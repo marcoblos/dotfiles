@@ -1,5 +1,6 @@
 #!/bin/bash
 
-RED='\033[0;31m'
-BLUE='\033[1;34m'
+WARNING='\033[0;31m'
+INFO='\033[1;34m'
+SUCCESS='\33[0;32m'
 NC='\033[0m' # No Color
