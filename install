@@ -22,19 +22,19 @@ Warning "Copy configs to /home"
 
 cp -v .bashrc .gitconfig .nvmrc .vimrc $HOME
 
-## cURL Chrome + BuildEssentials + JDK8 + Maven + Git + VIM + NVM + Node + NPM + Sublime + ZSH + Pip
+## cURL Chrome + BuildEssentials + JDK8 + Maven + Git + VIM + NVM + Node + NPM + ZSH + Pip
 
 Warning "Install programs"
 
-Install "zsh curl libc6 libcurl3 zlib1g google-chrome-stable build-essential libssl-dev libcurl4-gnutls-dev oracle-java8-installer oracle-java8-set-default maven git vim sublime-text-installer python-pip"
+Install "zsh curl libc6 libcurl3 zlib1g google-chrome-stable build-essential libssl-dev libcurl4-gnutls-dev oracle-java8-installer oracle-java8-set-default maven git vim python-pip"
 
 java -version
 
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 
 mkdir ~/.nvm
 nvm install stable
-nvm install 5.2.0
+nvm install 5.13.0
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
