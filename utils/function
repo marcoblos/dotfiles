@@ -75,10 +75,16 @@ instalar_programas_diversos () {
     install_omzsh
 }
 
+recarregar_variaveis () {
+    source ~/.bashrc
+    source ~/.zshrc
+}
+
 instalar_programas () {
     info "Instalando programas"
     instalar_programas_apt
     instalar_programas_deb
     instalar_programas_diversos
     info "Instação de programas finalizada"
+    recarregar_variaveis
 }
