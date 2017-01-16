@@ -62,6 +62,7 @@ instalar_programas_apt () {
     install_apt "maven"
     install_apt "vim"
     install_apt "python-pip"
+    install_apt "indicator-multiload"
 }
 
 instalar_programas_deb () {
