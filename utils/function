@@ -63,6 +63,7 @@ instalar_programas_apt () {
     install_apt "vim"
     install_apt "python-pip"
     install_apt "indicator-multiload"
+    install_apt "compizconfig-settings-manager"
 }
 
 instalar_programas_deb () {
